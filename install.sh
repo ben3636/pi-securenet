@@ -9,6 +9,8 @@ then
 fi
 
 # Enable & Configure Firewall
+echo "Answer 'y' to enable firewall when prompted..."
+sleep 5
 ufw allow 22/tcp
 ufw allow 80/tcp
 ufw enable
