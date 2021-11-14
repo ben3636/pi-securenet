@@ -5,10 +5,24 @@ The backend leverages php to run the bash scripts that use nmap to scan the netw
 
 Disclaimer aside, those empty tables have a table item string that I can pad each scan result with. During the install, each template HTML page is split into two parts: the half before the table items, and the half after them. When the php file calls the bash script, the script prints the first half of the HTML (up to the table), runs the scans, formats them as HTML table items, and then prints the last half of the HTML. The result is a dynamically-populated HTML page that displays just like any other. 
 
+## Thoughts for The Future
+* 2FA Implementation
+   * Main password for index.html and auto php key push to get to nested pages
+* Differential scan push notifications (new host on network)
+
+## Testing Environment
 This project was built and tested on the Raspberry Pi Zero 2W with Ubuntu Server 21.10 32-bit.
 
 # References
-* HTTP Auth: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04
-* 2FA: https://www.linuxjournal.com/content/two-factor-authentication-system-apache-and-ssh
-* Enabling embedded PHP: https://stackoverflow.com/questions/21279901/php-gets-commented-out-in-html
-* RPI Zero 2 Ubuntu Server Bug Fix: https://bugs.launchpad.net/ubuntu/+source/initramfs-tools/+bug/1950214
+* HTTP Auth: 
+   * https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04
+* 2FA:
+   * https://www.linuxjournal.com/content/two-factor-authentication-system-apache-and-ssh
+* Enabling embedded PHP:
+   * https://stackoverflow.com/questions/21279901/php-gets-commented-out-in-html
+* RPI Zero 2 Ubuntu Server Bug Fix:
+   * https://bugs.launchpad.net/ubuntu/+source/initramfs-tools/+bug/1950214
+* Misc
+   * https://stackoverflow.com/questions/21279901/php-gets-commented-out-in-html
+   * https://www.ionos.com/digitalguide/server/configuration/password-protect-a-directory-with-apache/
+
