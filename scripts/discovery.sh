@@ -3,6 +3,12 @@
 ### Set initial counter value
 i=1
 
+### Calculate Subnet
+subnet_part1=$(ip a | grep -o ".*\.*\.*\/.. " | grep -v inet6 | sed -e s/'inet'// -e s/" "// | awk -F '.' ' { print $1"."$2"."$3"." } ' | awk ' { print $1 } ')
+subnet_part2="0"
+mask=$(ip a | grep -o ".*\.*\.*\/.. " | grep -v inet6 | grep -o /..)
+subnet=$subnet_part1$subnet_part2$mask
+
 ### Define Functions
 function table(){
         echo '<tr style="height: 66px;">'
@@ -18,7 +24,7 @@ mkdir -p scans
 date=$(date)
 
 ### Run Scan & Export to Report File
-nmap -sn -PR 192.168.10.0/24 -T5 -oG /var/www/html/scans/"scan-$date" >> /dev/null
+nmap -sn -PR $subnet -T5 -oG /var/www/html/scans/"scan-$date" >> /dev/null
 
 ### Print first half of the HTML before the table
 cat Discovery-Scan.html.p1
