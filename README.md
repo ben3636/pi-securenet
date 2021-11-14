@@ -1,6 +1,11 @@
 # Pi SecureNET
 Pi-SecureNET is a project where backend network recon marries web design to create an attractive yet effective interface to provide network visibility and vulnerability management off of $15 hardware
 
+The backend leverages php to run the bash scripts that use nmap to scan the network. The challenge was getting the results of the bash scripts into a readable, visually appealing format. With the help of the 'Nicepage' app for Mac, I was able to build a site that had empty tables on each respective page. From here, it gets really jenky. I'll admit it and any web-devs out there reading this are most definetly viscerally shuddering at this point but my background is in network and security, not web design so this was the easiest way for me to make it work. Disclaimer aside, those empty tables have a table string that I can pad each scan result with. 
+
+During the install, each template HTML page is split into two parts: the half before the table items, and the half after them. When the php file calls the bash script, the script prints the first half of the HTML (up to the table), runs the scans, formats them as HTML table items, and then prints the last half of the HTML. The result is a dynamically-populated HTML page that displays just like any other. 
+
+This project was built and tested on the Raspberry Pi Zero 2W with Ubuntu Server 21.10 32-bit.
 
 # References
 * HTTP Auth: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04
