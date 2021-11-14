@@ -40,7 +40,7 @@ else
 	echo "File exists!"
 fi
 
-if [[ $1 != "Vulnerability-Scan.html" ]]
+if [[ $1 != *"Vulnerability-Scan.html"* ]]
 then
 	split_table $1
 else
