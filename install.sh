@@ -8,6 +8,11 @@ then
   exit 1
 fi
 
+# Enable & Configure Firewall
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw enable
+
 # Fix Pi Zero Ubuntu Bug
 apt install lz4
 sed -i -e '/^COMPRESS=/ c COMPRESS=lz4' /etc/initramfs-tools/initramfs.conf
