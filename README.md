@@ -9,6 +9,8 @@ The coolest part of this entire project is that it can be built for under $20. N
 
 >NOTE: The default HTTP auth user is 'ben', you can change this in the install script if desired 
 
+> The links in the site also have a hard-coded IP at this time. The IP of your Pi will eventually be calculated and updated in the files but this feature is not yet available so you'll have to go into each HTML page and find/replace all
+
 ## Thoughts for The Future
 * 2FA Implementation
    * Main password for index.html and auto php key push to get to nested pages
