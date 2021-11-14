@@ -5,6 +5,8 @@ The backend leverages php to run the bash scripts that use nmap to scan the netw
 
 Disclaimer aside, those empty tables have a table item string that I can pad each scan result with. During the install, each template HTML page is split into two parts: the half before the table items, and the half after them. When the php file calls the bash script, the script prints the first half of the HTML (up to the table), runs the scans, formats them as HTML table items, and then prints the last half of the HTML. The result is a dynamically-populated HTML page that displays just like any other. 
 
+>NOTE: The default HTTP auth user is 'ben', you can change this in the install script if desired 
+
 ## Thoughts for The Future
 * 2FA Implementation
    * Main password for index.html and auto php key push to get to nested pages
