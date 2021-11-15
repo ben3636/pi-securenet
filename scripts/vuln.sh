@@ -22,7 +22,7 @@ echo -n '<p class="u-align-left u-text u-text-3">'
 
 ### Parse the results file and extract fields
 cat scans/"vulnscan-$date" | grep -v "Status: Up"  | grep -v ^#  \
-| sed '1,2d' | sed -e s/^$/'<br><br>'/g -e s/'|'/'<br>---------|'/g -e s/'Host is up.*\.'/'<br>'/g -e s/"Not shown:.*ports"//g -e s/'Not shown: .* filtered ports'//g -e s/'Not shown: .* closed ports'//g  -e s/"PORT.*STATE.*SERVICE"/'*'/g
+| sed -e s/^$/'<br><br>'/g -e s/'|'/'<br>---------|'/g -e s/'Host is up.*\.'/'<br>'/g -e s/"Not shown:.*ports"//g -e s/'Not shown: .* filtered ports'//g -e s/'Not shown: .* closed ports'//g  -e s/"PORT.*STATE.*SERVICE"/'*'/g
 echo '</p>'
 
 ### Print second half of the HTML after the placeholder
