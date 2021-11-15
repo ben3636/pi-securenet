@@ -30,7 +30,7 @@ nmap -sn -PR $subnet -T5 -oG /var/www/html/scans/"scan-$date" >> /dev/null
 cat Discovery-Scan.html.p1
 
 ### Parse the scan file and extract fields
-cat scans/"scan-$date" | grep -v ^# | sed '1,3d' \
+cat scans/"scan-$date" | grep -v ^# \
 | while read line
 do
 	ip=$(echo $line | awk ' { print $2 } ')
