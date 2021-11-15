@@ -1,5 +1,7 @@
 #!/bin/bash
 
+timedatectl set-timezone America/New_York
+
 # Ensure script is run by root
 clear
 if [[ $(whoami) != "root" ]]
