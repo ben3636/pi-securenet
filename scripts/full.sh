@@ -26,7 +26,7 @@ mkdir -p scans
 date=$(date)
 
 ### Run Scan & Export to Report File
-nmap -T5 $subnet -p-1000 -oG /var/www/html/scans/"fullscan-$date" >> /dev/null
+nmap -PR -T5 $subnet -p-1000 -oG /var/www/html/scans/"fullscan-$date" >> /dev/null
 
 ### Print first half of the HTML before the table
 cat Full-Scan.html.p1
