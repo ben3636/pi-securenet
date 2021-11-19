@@ -1,0 +1,38 @@
+#!/bin/bash
+
+###---Define Functions---###
+function push_notif(){
+        message=$1
+        v2=$2
+        v3=$3
+        curl -X POST -H "Content-Type: application/json" -d '{"value1":"'"$message"'","value2":"'"$v2"'","value3":"'"$v3"'"}' https://maker.ifttt.com/trigger/Pi-IDS/with/key/XXXXXX
+}
+
+### Calculate Subnet
+subnet_part1=$(ip a | grep -o ".*\.*\.*\/.. " | grep -v inet6 | sed -e s/'inet'// -e s/" "// | awk -F '.' ' { print $1"."$2"."$3"." } ' | awk ' { print $1 } ')
+subnet_part2="0"
+mask=$(ip a | grep -o ".*\.*\.*\/.. " | grep -v inet6 | grep -o /..)
+subnet=$subnet_part1$subnet_part2$mask
+
+### Create Scan Folder && Get Current Date
+mkdir -p /var/www/html/scans
+date=$(date)
+
+### Run Scan & Export to Report File
+nmap -sn -PR $subnet -T5 -oG /var/www/html/scans/"discovery-differential" >> /dev/null
+
+
+diff=$(comm /var/www/html/scans/discovery-baseline /var/www/html/scans/discovery-differential --output-delimiter='|||' -13 --nocheck-order | grep -v ^#)
+#echo $diff
+
+message="New Host Detected on Network:"
+host=$(echo $diff | awk ' { print $2 } ')
+hostname=$(echo $diff | awk ' { print $3 } ')
+
+if [[ $host != '' ]]
+then
+#       echo "Pushing $message -$host- $hostname"
+        push_notif "$message" "$host" "$hostname"
+else
+        echo "No Change..."
+fi
