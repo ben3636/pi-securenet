@@ -38,7 +38,7 @@ You're probably asking yourself what that means. Differential scanning is a way 
 ## Testing Environment
 This project was built and tested on the Raspberry Pi Zero 2W with Ubuntu Server 21.10 32-bit.
 
-# References
+## References
 * HTTP Auth: 
    * https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04
 * 2FA:
