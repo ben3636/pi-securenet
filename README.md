@@ -17,10 +17,23 @@ The coolest part of this entire project is that it can be built for under $20. N
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.34%20PM.png)
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.45%20PM.png)
 
+## Beta Features (Pre-Release)
+### Scheduled differential discovery scans is nearly out of development!
+You're probably asking yourself what that means. Differential scanning is a way of scanning for deviation from the established basline. What this means in the context of this project is this:
+
+1. During setup, you run a discovery scan until you see the results that you feel are "baseline"
+  a) Are these all the hosts you expect to see on your network?
+  b) If the answer is yes, the result is saved to a "baseline" file
+2. After the baseline is established, an hourly cronjob runs a quick discovery scan over the subnet and compares it to the baseline
+  a) This comparison logic is looking for host additions, or new hosts that are not listed in the baseline file
+  b) If a new host is detected, a push notification is sent to your phone with the IP, hostname, etc
+
 ## Thoughts for The Future
 * 2FA Implementation
    * Main password for index.html and auto php key push to get to nested pages
-* Differential scan push notifications (new host on network)
+* Ability to manage firewall rules for devices via web interface (block internet, etc)
+* Combine previous Pi IDS project to provide Suricata push notifications
+* Zeek for activity monitoring, audit capibility, and indident response
 
 ## Testing Environment
 This project was built and tested on the Raspberry Pi Zero 2W with Ubuntu Server 21.10 32-bit.
