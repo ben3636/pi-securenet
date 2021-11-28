@@ -1,0 +1,1 @@
+sed -i.bak -e 's/http:\/\/192.168.10.4\/discovery.php/http:\/\/192.168.10.4\/load.php?page=discovery.php/' -e 's/http:\/\/192.168.10.4\/full.php/http:\/\/192.168.10.4\/load.php?page=full.php/' -e 's/http:\/\/192.168.10.4\/vuln.php/http:\/\/192.168.10.4\/load.php?page=vuln.php/' $1
