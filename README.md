@@ -27,6 +27,8 @@ You're probably asking yourself what that means. Differential scanning is a way 
 2. After the baseline is established, an hourly cronjob runs a quick discovery scan over the subnet and compares it to the baseline
   a) This comparison logic is looking for host additions, or new hosts that are not listed in the baseline file
   b) If a new host is detected, a push notification is sent to your phone with the IP, hostname, etc
+  
+ > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/
 
 ## Thoughts for The Future
 * 2FA Implementation
