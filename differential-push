@@ -5,7 +5,7 @@ function push_notif(){
         message=$1
         v2=$2
         v3=$3
-        curl -X POST -H "Content-Type: application/json" -d '{"value1":"'"$message"'","value2":"'"$v2"'","value3":"'"$v3"'"}' https://maker.ifttt.com/trigger/Pi-IDS/with/key/XXXXXXXXX
+        curl -X POST -H "Content-Type: application/json" -d '{"value1":"'"$message"'","value2":"'"$v2"'","value3":"'"$v3"'"}' https://maker.ifttt.com/trigger/Pi-IDS/with/key/XXXXXXXX
 }
 
 ### Calculate Subnet
@@ -37,9 +37,11 @@ do
 	message="New Host Detected on Network:"
 	host=$(echo $diff | awk ' { print $2 } ')
 	hostname=$(echo $diff | awk ' { print $3 } ')
+
+	# Perform MAC Lookup if No DNS Name
 	if [[ $hostname == '()' ]]
 	then
-		hostname="Unamed Device"
+		hostname=$(nmap -sn -PR -T5 $host | grep "^MAC" | awk ' { print $3,$4 } ')
 	fi
 	if [[ $host != '' ]]
 	then
