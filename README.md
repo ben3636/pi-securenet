@@ -17,8 +17,8 @@ The coolest part of this entire project is that it can be built for under $20. N
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.34%20PM.png)
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.45%20PM.png)
 
-## Beta Features (Pre-Release)
-### Scheduled differential discovery scans is nearly out of development!
+## New Features
+### Scheduled Differential Discovery Scans
 You're probably asking yourself what that means. Differential scanning is a way of scanning for deviation from the established basline. What this means in the context of this project is this:
 
 1. During setup, you run a discovery scan until you see the results that you feel are "baseline"
