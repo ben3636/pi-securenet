@@ -26,7 +26,7 @@ apt update && apt upgrade -y
 apt autoremove -y
 
 # Install Packages
-apt install apache2 apache2-utils php nmap -y
+apt install apache2 apache2-utils php nmap avahi-utils -y
 
 # Migrate Files to Web Directory
 rm /var/www/html/index.html
