@@ -37,15 +37,29 @@ do
 	message="New Host Detected on Network:"
 	host=$(echo $diff | awk ' { print $2 } ')
 	hostname=$(echo $diff | awk ' { print $3 } ')
+        if [[ $hostname == "()" ]] || [[ $hostname == '' ]]
+        then
+                # Attempt to determine multicast/avahi/mdns hostname lookup if no DNS name
+                hostname=$(avahi-browse -ratp | grep $host | awk -F ";" ' { print $7 } ' | uniq)
+                if [[ $hostname == "()" ]] || [[ $hostname == '' ]]
+                then
+                        hostname='N/A'
+                fi
+        fi
 
-	# Perform MAC Lookup if No DNS Name
-	if [[ $hostname == '()' ]]
-	then
-		hostname=$(nmap -sn -PR -T5 $host | grep "^MAC" | awk ' { print $3,$4 } ')
-	fi
+        # Perform MAC Lookup
+        mac=$(nmap -sn -PR -T5 $host | grep "^MAC" | sed s/"MAC Address: "//g)
+        if [[ $hostname == 'N/A' ]]
+        then
+                hostname="$mac"
+        elif [[ $mac != '' ]]
+        then
+                hostname="$hostname -- $mac"
+        fi
+
 	if [[ $host != '' ]]
 	then
-	#       echo "Pushing $message -$host- $hostname"
+	        #echo "Pushing $message -$host- $hostname"
 	        push_notif "$message" "$host" "$hostname"
 	else
 	        echo "No Change..."
