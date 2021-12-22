@@ -37,9 +37,24 @@ do
         hostname=$(echo $line | awk ' { print $3 } ')
 	if [[ $hostname == "()" ]] || [[ $hostname == '' ]]
 	then
-		hostname='N/A'
+		# Attempt to determine multicast/avahi/mdns hostname lookup if no DNS name
+		hostname=$(avahi-browse -ratp | grep $ip | awk -F ";" ' { print $7 } ' | uniq)
+		if [[ $hostname == "()" ]] || [[ $hostname == '' ]]
+		then
+			hostname='N/A'
+		fi
 	fi
-	table $ip $hostname
+
+	# Perform MAC Lookup
+	mac=$(nmap -sn -PR -T5 $ip | grep "^MAC" | sed s/"MAC Address: "//g)
+	if [[ $hostname == 'N/A' ]]
+	then
+		hostname="$mac"
+	elif [[ $mac != '' ]]
+	then
+		hostname="$hostname -- $mac"
+	fi
+	table "$ip" "$hostname"
 done
 
 ### Print second half of the HTML after the table
