@@ -47,7 +47,7 @@ do
 
 	# Perform MAC Lookup
 	mac=$(nmap -sn -PR -T5 $ip | grep "^MAC" | sed s/"MAC Address: "//g)
-	if [[ $hostname == 'N/A' ]]
+	if [[ $hostname == 'N/A' ]] && [[ $mac != '' ]]
 	then
 		hostname="$mac"
 	elif [[ $mac != '' ]]
