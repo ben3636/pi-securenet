@@ -47,12 +47,30 @@ do
 
 	# Perform MAC Lookup
 	mac=$(nmap -sn -PR -T5 $ip | grep "^MAC" | sed s/"MAC Address: "//g)
-	if [[ $hostname == 'N/A' ]] && [[ $mac != '' ]]
+	if [[ $hostname == 'N/A' ]]
 	then
 		hostname="$mac"
 	elif [[ $mac != '' ]]
 	then
 		hostname="$hostname -- $mac"
+	fi
+
+	# Check for custom aliases for device
+	mac_address=$(echo $mac | awk ' { print $1 } ')
+	if [[ $mac_address != '' ]]
+	then
+		alias=$(cat /var/www/html/alias.txt | grep "$mac_address" | awk -F " --> " ' { print $2 } ')
+		if [[ $alias != '' ]]
+		then
+			#echo "Alias for $mac_address found!: $alias"
+			if [[ $alias != '' ]] && [[ $mac != '' ]]
+			then
+				hostname="$alias -- $mac"
+			elif [[ $alias != '' ]] && [[ $mac == '' ]]
+			then
+				hostname="$alias"
+			fi
+		fi
 	fi
 	table "$ip" "$hostname"
 done
