@@ -33,6 +33,8 @@ rm /var/www/html/index.html
 mv ~/pi-securenet/html/* /var/www/html/
 mv ~/pi-securenet/scripts/* /var/www/html/
 chmod +x /var/www/html/*.sh
+touch /var/www/html/alias.txt
+chmod o+w /var/www/html/alias.txt
 
 # Split HTML Page Files from Templates
 chmod +x ~/pi-securenet/update.sh
