@@ -30,6 +30,10 @@ You're probably asking yourself what that means. Differential scanning is a way 
   
  > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/
 
+### Device Naming (Discovery Scan Page)
+You can now set custom names for devices so you're never left guessing! Do this by visiting PI_IP_ADDRESS/alias.php. Throw in the device's MAC address and set a name and the device will show up with the preferred name going forward!
+
+
 ## Thoughts for The Future
 * 2FA Implementation
    * Main password for index.html and auto php key push to get to nested pages
