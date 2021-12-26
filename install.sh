@@ -38,10 +38,8 @@ chmod o+w /var/www/html/alias.txt
 
 # Split HTML Page Files from Templates
 chmod +x ~/pi-securenet/update.sh
-ls -1 /var/www/html/ | grep .html | while read line
-do
-        ~/pi-securenet/update.sh /var/www/html/"$line"
-done
+chmod +x /var/www/html/ip-update.sh
+/var/www/html/ip-update.sh
 
 # Add Sudo Privs for Web User
 echo 'www-data ALL=(root) NOPASSWD:/var/www/html/discovery.sh' >> /etc/sudoers
