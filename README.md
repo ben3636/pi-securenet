@@ -14,7 +14,7 @@ The coolest part of this entire project is that it can be built for under $20. N
 
 > The IP in the HTML pages is also hard-coded, the install script runs the ip-update.sh script to update the IP in the HTML to that of the Pi. If the IP changes after the install, you can manually run the ip-update.sh script to fix the broken links :)
 
-![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.34%20PM.png)
+![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Updated%20Firewall%20Demo.png)
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.45%20PM.png)
 
 ## New Features
