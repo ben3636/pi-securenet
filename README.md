@@ -28,7 +28,7 @@ You're probably asking yourself what that means. Differential scanning is a way 
   a) This comparison logic is looking for host additions, or new hosts that are not listed in the baseline file
   b) If a new host is detected, a push notification is sent to your phone with the IP, hostname, etc
   
- > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/
+ > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/ and run the "generate-baseline.sh" script to create the normal/baseline results
 
 ### Device Naming (Discovery Scan Page)
 You can now set custom names for devices so you're never left guessing! Do this by visiting PI_IP_ADDRESS/alias.php. Throw in the device's MAC address and set a name and the device will show up with the preferred name going forward!
