@@ -35,6 +35,8 @@ mv ~/pi-securenet/scripts/* /var/www/html/
 chmod +x /var/www/html/*.sh
 touch /var/www/html/alias.txt
 chmod o+w /var/www/html/alias.txt
+touch /var/www/html/scans/discovery-differential
+chmod o+w /var/www/html/discovery-differential
 
 # Split HTML Page Files from Templates
 chmod +x ~/pi-securenet/update.sh
