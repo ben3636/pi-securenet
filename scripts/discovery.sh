@@ -36,11 +36,11 @@ do
         mac=$(echo $line | awk -F ' => ' ' { print $2 } ')
 
 	# Determine if initial scan found hostname and parse accordingly
-        if [[ $(echo $line | awk -F ' => ' ' { print $1 } ' | wc -l) != 1 ]]
+        if [[ $(echo $line | awk -F ' => ' ' { print $1 } ' | wc -w) != 1 ]]
         then
                 host=$(echo $line | awk -F ' => ' ' { print $1 } ' | awk ' { print $2 } ' | sed -e "s/(//g" -e "s/)//g")
                 hostname=$(echo $line | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ')
-        elif [[ $(echo $line | awk -F ' => ' ' { print $1 } ' | wc -l) == 1 ]]
+        elif [[ $(echo $line | awk -F ' => ' ' { print $1 } ' | wc -w) == 1 ]]
         then
                 hostname=''
                 host=$(echo $line | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ' | sed -e "s/(//g" -e "s/)//g")
