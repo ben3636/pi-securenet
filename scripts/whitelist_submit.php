@@ -1,7 +1,7 @@
 <?php
-$filename = 'baseline_beta.txt';
+$filename = 'scans/discovery-baseline';
 $line = $_POST['entry'];
-$line = $line."\n";
+$line = "\n".$line." # Added Manually Via /whitelist.php\n";
 // Let's make sure the file exists and is writable first.
 if (is_writable($filename)) {
     if (!$fp = fopen($filename, 'a')) {
