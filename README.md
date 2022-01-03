@@ -30,6 +30,8 @@ You're probably asking yourself what that means. Differential scanning is a way 
   
  > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/ and run the "generate-baseline.sh" script to create the normal/baseline results
 
+> If a new device shows up after generating the baseline, you can now "whitelist" devices by adding them to the baseline file. To do this, just use PI_IP_ADDRESS/whitelist.php :)
+
 ### Device Naming (Discovery Scan Page)
 You can now set custom names for devices so you're never left guessing! Do this by visiting PI_IP_ADDRESS/alias.php. Throw in the device's MAC address and set a name and the device will show up with the preferred name going forward!
 
