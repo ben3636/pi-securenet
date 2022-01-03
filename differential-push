@@ -34,10 +34,18 @@ done
 ### Read Results & Send Push Notification(s)
 cat /var/www/html/scans/diff.log | grep -v ^$ | while read diff
 do
-	message="New Host Detected on Network:"
-	host=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $2 } ' | sed -e "s/(//g" -e "s/)//g")
-	hostname=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ')
-	mac=$(echo $diff | awk -F ' => ' ' { print $2 } ')
+        message="New Host Detected on Network:"
+        mac=$(echo $diff | awk -F ' => ' ' { print $2 } ')
+
+        if [[ $(echo $diff | awk -F ' => ' ' { print $1 } ' | wc -l) != 1 ]]
+        then
+                host=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $2 } ' | sed -e "s/(//g" -e "s/)//g")
+                hostname=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ')
+        elif [[ $(echo $diff | awk -F ' => ' ' { print $1 } ' | wc -l) == 1 ]]
+        then
+                hostname=''  
+                host=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ' | sed -e "s/(//g" -e "s/)//g")
+        fi
 
 	# Perform Hostname Lookup If Needed
         if [[ $hostname == '' ]]
