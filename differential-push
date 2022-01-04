@@ -19,7 +19,7 @@ mkdir -p /var/www/html/scans
 date=$(date)
 
 ### Run Scan & Export to Report File
-nmap -sn -PR $subnet -T5 | awk '/Nmap scan report for/{printf $5;printf " "$6;}/MAC Address:/{print " => "$3, $4, $5, $6;}' > /var/www/html/scans/"discovery-differential"
+nmap -sn -PR $subnet -T5 | awk '/Nmap scan report for/{printf $5;printf " "$6;}/MAC Address:/{print " => "$3, $4, $5, $6;}' | sed -e "s/  =>/ =>/g" > /var/www/html/scans/"discovery-differential"
 
 echo '' > /var/www/html/scans/diff.log
 cat /var/www/html/scans/discovery-differential | while read line
