@@ -1,0 +1,54 @@
+### -- Main Directory --- ###
+
+1. 000-default.conf & apache2.conf
+
+	- "Drop-in" Apache configs for HTTP password authentication
+
+2. differential-push
+	- Crontab file to run hourly differential scans to send push notifications when new hosts join the network
+
+3. generate-baseline.sh
+	- Used in setup to generate the "baseline" scan result file for "differential-push" to compare results to. Any host found by the scheduled differential scan not in the baseline file will be sent in a push notification. 
+	- Additional "whitelisted" hosts can be added after setup using http://PI_IP/whitelist.php
+
+4. install.sh
+	- Main installer, run this to install PiSecureNET and its required dependencies
+
+5. update.sh
+	- Refreshes/re-splits the template HTML files into their .p1 and .p2 components for the bash scripts to use
+	- This is used by ip-update.sh to update the HTML files when the IP references in the HTML templates are changed
+
+### -- Scripts -- ###
+
+1. alias.php & submit.php
+	- Webpage to add aliases/custom names to devices in scan results based on mac address
+	- "submit.php" takes the input from alias.php and writes it to the alias file
+
+2. discovery.php & discovery.sh
+	- Discovery webpage and associated script
+	- This is just a quick layer 2 ARP scan of the subnet to get a quick inventory of hosts  
+
+3. full.php & full.sh
+	- Full Scan webpage and associated script
+	- This is a more intensive layer 3 scan that scans the subnet and first 1000 ports
+
+4. ip-update.sh
+	- Use this to update the hard-coded links in the HTML to that of the Pi
+	- The installer does this on setup but if the IP changes the site will still have links to the old IP address and will not work
+
+5. ufw.php & ufw.sh
+	- Firewall Status webpage and associated script
+	- Gives a list of rules in UFW
+
+6. logins.php & logins.sh
+	- Logins webpage and associated script
+	- Shows the latest successful/failed SSH logins
+
+7. vuln.php & vuln.sh
+	- Vulnerability Scan webpage and associated script
+	- Runs a vulnerabilty scan against the subnet
+
+8. whitelist.php & whitelist_submit.php
+	- Whitelist webpage and submit form to append host entries to the baseline file to prevent the differential scan from flagging the host
+
+ 
