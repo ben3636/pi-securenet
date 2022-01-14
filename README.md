@@ -17,7 +17,7 @@ The coolest part of this entire project is that it can be built for under $20. N
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Updated%20Firewall%20Demo.png)
 ![](https://github.com/ben3636/pi-securenet/blob/main/screenshots/Screen%20Shot%202021-11-14%20at%202.49.45%20PM.png)
 
-## New Features
+## New Features (Available)
 ### Scheduled Differential Discovery Scans
 You're probably asking yourself what that means. Differential scanning is a way of scanning for deviation from the established basline. What this means in the context of this project is this:
 
@@ -35,6 +35,11 @@ You're probably asking yourself what that means. Differential scanning is a way 
 ### Device Naming (Discovery Scan Page)
 You can now set custom names for devices so you're never left guessing! Do this by visiting PI_IP_ADDRESS/alias.php. Throw in the device's MAC address and set a name and the device will show up with the preferred name going forward!
 
+## Features in Beta
+* Home page re-organized and optimized for mobile
+* Vulnerability scan results in cleaner format
+* Visual overhaul of newer pages (aias.php and whitelist.php)
+* Actual links to newer pages (alias.php and whitelist.php)
 
 ## Thoughts for The Future
 * 2FA Implementation
