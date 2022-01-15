@@ -29,6 +29,7 @@ You're probably asking yourself what that means. Differential scanning is a way 
   b) If a new host is detected, a push notification is sent to your phone with the IP, hostname, etc
   
  > This feature is out of beta but needs to be configured manually. The file "differential-push" will need to be updated with your IFTT webhook. From there, just drop it in /etc/cron.hourly/ and run the "generate-baseline.sh" script to create the normal/baseline results
+ 
  > IFTTT Webhooks Setup Tutorial: https://youtu.be/l-YP8uSJ9Q0
 
 > If a new device shows up after generating the baseline, you can now "whitelist" devices by adding them to the baseline file. To do this, just use PI_IP_ADDRESS/whitelist.php :)
