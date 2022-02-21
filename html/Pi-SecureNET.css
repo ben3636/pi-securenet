@@ -3,55 +3,60 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 574px;
+  min-height: 684px;
 }
 
 .u-section-1 .u-btn-1 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: 87px auto 0 121px;
-  padding: 25px 132px 25px 131px;
+  align-self: center;
+  margin: 28px auto 0;
+  padding: 25px 132px;
 }
 
 .u-section-1 .u-btn-2 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: -82px auto 0 618px;
-  padding: 25px 161px 25px 159px;
+  align-self: center;
+  margin: 28px auto 0;
+  padding: 24px 161px 26px;
 }
 
 .u-section-1 .u-btn-3 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: 47px auto 0 121px;
-  padding: 24px 116px;
+  align-self: center;
+  margin: 28px auto 0;
+  padding: 24px 120px 24px 119px;
 }
 
 .u-section-1 .u-btn-4 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: -80px auto 0 623px;
-  padding: 24px 132px 26px 130px;
+  align-self: center;
+  margin: 28px auto 0;
+  padding: 24px 142px 25px 140px;
 }
 
 .u-section-1 .u-btn-5 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: 45px auto 0 123px;
-  padding: 24px 137px 25px 136px;
+  align-self: center;
+  margin: 28px auto 0;
+  padding: 24px 135px 26px 134px;
 }
 
 .u-section-1 .u-btn-6 {
   background-image: none;
   border-style: none;
   font-size: 1.25rem;
-  margin: -81px auto 60px 625px;
-  padding: 24px 164px 25px;
+  margin: 28px auto;
+  padding: 24px 170px 25px 169px;
 }
 
 @media (max-width: 1199px) {
@@ -68,11 +73,11 @@
   }
 
   .u-section-1 .u-btn-4 {
-    margin-left: 484px;
+    margin-left: 61px;
   }
 
   .u-section-1 .u-btn-5 {
-    margin-left: 61px;
+    margin-left: 484px;
   }
 
   .u-section-1 .u-btn-6 {
@@ -85,7 +90,7 @@
     margin-left: 259px;
   }
 
-  .u-section-1 .u-btn-4 {
+  .u-section-1 .u-btn-5 {
     margin-left: 264px;
   }
 
@@ -99,7 +104,7 @@
     margin-left: 79px;
   }
 
-  .u-section-1 .u-btn-4 {
+  .u-section-1 .u-btn-5 {
     margin-left: 84px;
   }
 
