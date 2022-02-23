@@ -42,8 +42,6 @@ While this is not visibly linked in the site yet, this feature is in public beta
 
 ## Features in Beta
 * Vulnerability scan results in cleaner format
-* Visual overhaul of newer pages (aias.php and whitelist.php)
-* Actual links to newer pages (alias.php and whitelist.php)
 
 ## Thoughts for The Future
 * 2FA Implementation
