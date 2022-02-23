@@ -38,7 +38,7 @@ You're probably asking yourself what that means. Differential scanning is a way 
 You can now set custom names for devices so you're never left guessing! Do this by visiting PI_IP_ADDRESS/alias.php. Throw in the device's MAC address and set a name and the device will show up with the preferred name going forward!
 
 ### Targeted Scans
-While this is not visibly linked in the site yet, this feature is in public beta (accessible via /test-form.html). You can enter one specific host to run a full scan on instead of using the regular full scan option that scans the entire subnet
+While this is not visibly linked in the site yet, this feature is in public beta (accessible via /targeted-scan.html). You can enter one specific host to run a full scan on instead of using the regular full scan option that scans the entire subnet
 
 ## Features in Beta
 * Vulnerability scan results in cleaner format
