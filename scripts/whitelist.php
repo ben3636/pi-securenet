@@ -35,15 +35,17 @@
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </symbol>
 </defs></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">Discovery Scan</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">Full Scan</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">Vulnerability Scan</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">UFW</a>
-</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 20px;">Login Activity</a>
+</a>
+</div>
+<div class="u-custom-menu u-nav-container">
+<ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 8px;">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=discovery.php" style="padding: 10px 8px;">Discovery Scan</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=full.php" style="padding: 10px 8px;">Full Scan</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=vuln.php" style="padding: 10px 8px;">Vulnerability Scan</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/ufw.php" style="padding: 10px 8px;">UFW</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/logins.php" style="padding: 10px 8px;">Login Activity</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/whitelist.php" style="padding: 10px 8px;">Whitelist</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/alias.php" style="padding: 10px 21px 10px 8px;">Alias</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -51,11 +53,13 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Discovery Scan</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Full Scan</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Vulnerability Scan</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">UFW</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Login Activity</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=discovery.php" style="padding: 10px 20px;">Discovery Scan</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=full.php" style="padding: 10px 20px;">Full Scan</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=vuln.php" style="padding: 10px 20px;">Vulnerability Scan</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/ufw.php" style="padding: 10px 20px;">UFW</a>
+    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/logins.php" style="padding: 10px 20px;">Login Activity</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/whitelist.php" style="padding: 10px 20px;">Whitelist</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/alias.php" style="padding: 10px 20px;">Alias</a>
 </li></ul>
               </div>
             </div>
