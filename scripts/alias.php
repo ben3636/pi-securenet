@@ -38,7 +38,7 @@
 </a>
 </div>
 <div class="u-custom-menu u-nav-container">
-<ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="#" style="padding: 10px 8px;">Home</a>
+<ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="index.html" style="padding: 10px 8px;">Home</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=discovery.php" style="padding: 10px 8px;">Discovery Scan</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=full.php" style="padding: 10px 8px;">Full Scan</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-white u-border-hover-grey-50 u-button-style u-nav-link u-text-active-white u-text-hover-grey-50 u-text-white" href="http://192.168.10.4/load.php?page=vuln.php" style="padding: 10px 8px;">Vulnerability Scan</a>
@@ -52,7 +52,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html" style="padding: 10px 20px;">Home</a>
                 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=discovery.php" style="padding: 10px 20px;">Discovery Scan</a>
     </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=full.php" style="padding: 10px 20px;">Full Scan</a>
     </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://192.168.10.4/load.php?page=vuln.php" style="padding: 10px 20px;">Vulnerability Scan</a>
