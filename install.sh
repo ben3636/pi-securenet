@@ -37,7 +37,9 @@ touch /var/www/html/alias.txt
 chmod o+w /var/www/html/alias.txt
 mkdir -p /var/www/html/scans
 touch /var/www/html/scans/discovery-differential
+touch /var/www/html/scans/discovery-baseline
 chmod o+w /var/www/html/scans/discovery-differential
+chmod o+w /var/www/html/scans/discovery-baseline
 
 # Split HTML Page Files from Templates
 chmod +x ~/pi-securenet/update.sh
