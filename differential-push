@@ -5,7 +5,7 @@ function push_notif(){
         message=$1
         v2=$2
         v3=$3
-        curl -X POST -H "Content-Type: application/json" -d '{"value1":"'"$message"'","value2":"'"$v2"'","value3":"'"$v3"'"}' https://maker.ifttt.com/trigger/Pi-IDS/with/key/XXXXXXX
+        curl -X POST -H "Content-Type: application/json" -d '{"value1":"'"$message"'","value2":"'"$v2"'","value3":"'"$v3"'"}' https://maker.ifttt.com/trigger/XXXXXXXXXXXXXXX
 }
 
 ### Calculate Subnet
@@ -24,7 +24,8 @@ nmap -sn -PR $subnet -T5 | awk '/Nmap scan report for/{printf $5;printf " "$6;}/
 echo '' > /var/www/html/scans/diff.log
 cat /var/www/html/scans/discovery-differential | while read line
 do
-	diff=$(grep "$line" /var/www/html/scans/discovery-baseline)
+	line3=$(echo $line | awk -F " => " ' { print $2 } ' | awk ' { print $1 } ' | grep -v ^$ )
+	diff=$(grep "$line3" /var/www/html/scans/discovery-baseline)
 	if [[ $diff == '' ]]
 	then
 		echo "$line" >> /var/www/html/scans/diff.log
@@ -43,7 +44,7 @@ do
                 hostname=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ')
         elif [[ $(echo $diff | awk -F ' => ' ' { print $1 } ' | wc -l) == 1 ]]
         then
-                hostname=''  
+                hostname=''
                 host=$(echo $diff | awk -F ' => ' ' { print $1 } ' | awk ' { print $1 } ' | sed -e "s/(//g" -e "s/)//g")
         fi
 
@@ -71,7 +72,7 @@ do
                 hostname="$mac"
         elif [[ $hostname != "N/A" ]] && [[ $mac != '' ]]
         then
-       	        hostname="$hostname -- $mac"
+	        hostname="$hostname -- $mac"
 	fi
 
 	# Send Push Notification
