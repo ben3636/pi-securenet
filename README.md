@@ -48,7 +48,7 @@ While this is not visibly linked in the site yet, this feature is in public beta
    * Main password for index.html and auto php key push to get to nested pages
 * Ability to manage firewall rules for devices via web interface (block internet, etc)
 * Combine previous Pi IDS project to provide Suricata push notifications
-* Zeek for activity monitoring, audit capibility, and indident response
+* Zeek for activity monitoring, audit capibility, and incident response
 
 ## Testing Environment
 This project was built and tested on the Raspberry Pi Zero 2W with Ubuntu Server 21.10 32-bit.
